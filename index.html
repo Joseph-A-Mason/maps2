@@ -93,9 +93,9 @@ function fixNums(n){
 //Popup text for PLSS layer, generated from feature properties after conversion to GeoJSON
 //Also generates links to searches in BLM GLO database and UW Libraries collection of //PLSS notes
 function PLSSPopup(feature, layer) {
-        layer.bindPopup("<b>PLSS Description</b><br>Township:"+fixNums(feature.properties.township_n)+"N<br>Range:"+fixNums(feature.properties.range_num)+meridDir(feature.properties.merid_dir)+"<br>Section:"+fixNums(feature.properties.section_nu)+"<br><a href='https://glorecords.blm.gov/results/default.aspx?searchCriteria=type=patent|st=WI|cty=|twp_nr="+fixNums(feature.properties.township_n)+"|twp_dir=N|rng_nr="+fixNums(feature.properties.range_num)+"|rng_dir="+meridDir(feature.properties.merid_dir)+"|sp=true|sw=true|sadv=false#resultsTabIndex=0&page=1&sortField=6&sortDir=0' target='_blank'>Link to township land patents</a><br><a href='https://digicoll.library.wisc.edu/cgi-bin/SurveyNotes/SurveyNotes-idx?type=PLSS&town=T0"+feature.properties.township_n+"N&range=R0"+feature.properties.range_num+meridDir(feature.properties.merid_dir)+"&sect=&size=First+100'target='_blank'>Link to township PLSS Notes</a>")
+        layer.bindPopup("<b>PLSS Description</b><br>Township:"+fixNums(feature.properties.township_n)+"N<br>Range:"+fixNums(feature.properties.range_num)+meridDir(feature.properties.merid_dir)+"<br>Section:"+fixNums(feature.properties.section_nu)+"<br><a href='https://glorecords.blm.gov/results/default.aspx?searchCriteria=type=patent|st=WI|cty=|twp_nr="+fixNums(feature.properties.township_n)+"|twp_dir=N|rng_nr="+fixNums(feature.properties.range_num)+"|rng_dir="+meridDir(feature.properties.merid_dir)+"|sp=true|sw=true|sadv=false#resultsTabIndex=0&page=1&sortField=6&sortDir=0' target='_blank'>Link to township land patents</a><br><a href='https://search.library.wisc.edu/search/digital?filter%5Bfacets%5D%5Bgeo_topics_facet~Township+T" +feature.properties.township_n+"NR"+feature.properties.range_num+meridDir(feature.properties.merid_dir)+"%2C+4th+Meridian%5D=yes' target='_blank'>Link to township PLSS Notes</a>")
 } 
-    
+                        
 //Popup text for county parcels layer, generated from feature properties
 function CoParcelsPopup(feature, layer) {
         layer.bindPopup("Owner 1:"+feature.properties.OWNERNME1+"<br>Owner 2:"+feature.properties.OWNERNME2)
